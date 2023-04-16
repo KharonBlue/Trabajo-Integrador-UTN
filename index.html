@@ -5,41 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/jquery-3.6.4.js.js"></script>
-    <script src="js/script.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <title>Inicio</title>
 </head>
 <body>
     <div class="container-xxl">
-
             <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">EZ EM</a>
+                  <a class="navbar-brand inicio" href="#">EZ EM</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active inicio" aria-current="page" href="#">Inicio</a>
                       </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Productos
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Buzos</a></li>
-                          <li><a class="dropdown-item" href="#">Oversize</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Todos los productos</a></li>
-                        </ul>
+                      <li class="nav-item">
+                        <a class="nav-link all-products" href="#">Productos</a>
+                      </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contacto</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de nosotros</a>
+                            <a class="nav-link" href="#" id="acercade">Acerca de nosotros</a>
                           </li>
                       </li>
                     </ul>
@@ -51,132 +42,121 @@
                 </div>
               </nav>
     </div>
+      <div class="container-sm acercade"></div>
+      <div class="container-sm filtro"></div>
+    
 
-
-    <div class="wrap">
-        <h1>Elige un producto</h1>
-         <div class="store-wrapper">
-            <div class="category_list">
-                <a href="#" class="category_item" category="all" >Todo</a>
-                <a href="#" class="category_item" category="hombre">Buzos para Hombre</a>
-                <a href="#" class="category_item" category="mujer">Buzos para Mujer</a>
-                <a href="#" class="category_item" category="oversize">Oversize</a>
-            </div>
-               <section class="products-list">
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/ADHR6593-1.jpg" alt="">
-                    <a href="#">Buzo ARG Adidas Graphic Crew Hombre</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/FI_F11AT534012-6577-1.jpg" alt="">
-                    <a href="#">Buzo Fila Inbox</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/LONIFW230474-1.jpg" alt="">
-                    <a href="#">Buzo Lotto Hs May Hombre</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/LONIFW230475-1.jpg" alt="">
-                    <a href="#">Buzo Lotto Hs May</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/NI_DB4952-063-1.jpg" alt="">
-                    <a href="#">Buzo Nike Sportwear JDI </a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/NI_DM4743-012-1.jpg" alt="">
-                    <a href="#">Buzo Nike Dri-Fit Trail</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/PU_847058-03-1.jpg" alt="">
-                    <a href="#">Buzo Puma Essentials Big Logo </a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/TO_165118-1.jpg" alt="">
-                    <a href="#">Buzo Topper Esencial</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/TO_165330-1.jpg" alt="">
-                    <a href="#">Buzo Topper Roy URB</a>
-                  </div>
-                  <div class="product-item" category="oversize">
-                    <img src="Images/Hombre/TO_165435-1.jpg" alt="">
-                    <a href="#">Buzo Topper Rtc Oversize</a>
-                  </div>
-                  <div class="product-item" category="oversize">
-                    <img src="Images/Hombre/TO_165465-1.jpg" alt="">
-                    <a href="#">Buzo Topper Rtc Oversize URB II</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/TO_165524-1.jpg" alt="">
-                    <a href="#">Buzo Topper Rpy URB</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/UA_1354539-001-1.jpg" alt="">
-                    <a href="#">Buzo Under Armour Sportstyle Terry Logo</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/UA_1357092-012-1.jpg" alt="">
-                    <a href="#">Buzo Under Armour Rival Fleece</a>
-                  </div>
-                  <div class="product-item" category="hombre">
-                    <img src="Images/Hombre/UA_1366357-409-1.jpg" alt="">
-                    <a href="#">Buzo Under Armour Rival FLC Colorblock</a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/LONIFW230499-1.jpg" alt="">
-                    <a href="#">Buzo Lotto Hs May Mujer</a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/LONIFW230498-1.jpg" alt="">
-                    <a href="#">Buzo Lotto Hs May</a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/TO_165117-1.jpg" alt="">
-                    <a href="#">Buzo Topper Esencial  </a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/TO165788-1.jpg" alt="">
-                    <a href="#">Buzo Topper Rtc Mujer</a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/PU539471-47-1.jpg" alt="">
-                    <a href="#">Buzo Puma Power Tape </a>
-                  </div>
-                  <div class="product-item" category="oversize">
-                    <img src="Images/Mujer/TO_165414-1.jpg" alt="">
-                    <a href="#">Buzo Topper RTC Oversize Mujer </a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/PU670918-47-1.jpg" alt="">
-                    <a href="#">Buzo Puma Essentials Metallic Logo</a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/LO_NIFW22175-1.jpg" alt="">
-                    <a href="#">Buzo Lotto Adventure </a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/AS_AI0000577713-1.jpg" alt="">
-                    <a href="#">Buzo Asics Outline </a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/PU_848811-35-1.jpg" alt="">
-                    <a href="#">Buzo Puma Power Training </a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/AD_H47479-1.jpg" alt="">
-                    <a href="#">Buzo Adidas Crop </a>
-                  </div>
-                  <div class="product-item" category="mujer">
-                    <img src="Images/Mujer/AD_GM5514-1.jpg" alt="">
-                    <a href="#">Buzo Adidas Essentials</a>
-                  </div>
-               </section>
-            </div>
+    <div class="container mt-4 mb-4 text-center cuerpo pt-4 pb-4">
+      <div class="container col-8 gy-5 pt-4 pb-4">
+        <h1 class="h1">BUZOS Y OVERSIZE</h1>
+        <h3 class="h3">Somos una empresa Argentina fabricante dedicada a la venta de prendas de ropa.</h3>
         
+      </div>
+      <div class="container col-8 pt-4 mt-4">
+        <h3 class="h4">¿Qué ofrecemos?</h3>
+        <h4 class="h5">Precios economicos</h4>
+        <h4 class="h5">Calidad premium</h4>
+        <h4 class="h5">Envios en toda la Argentina</h4>
+        <h4 class="h5 pb-4 mb-3">Compras 100% seguras</h4>
+        <h1 class="h1"></h1>
+      </div>
+      <div class="m-2 p-4"></div>
+
+      <p class="h5 mt-4">Opiniones de nuestros compradores</p>
     </div>
+    
+
+          <!-- Carrousel -->
+            <div id="carouselExampleCaptions" class="carousel slide container-sm col-7 mb-4 mt-1">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="Images/Carrusel/2.jpg" class="d-block w-100" alt="100px">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5 id="slide-1">Ana</h5>
+                    <p id="comentario-1"></p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="Images/Carrusel/4.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5 id="slide-2"></h5>
+                    <p id="comentario-2"></p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="Images/Carrusel/5.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5 id="slide-3"></h5>
+                    <p id="comentario-3"></p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <!-- End carrousel -->
+
+            <div class="m-3 p-4"></div>
+            <!-- Footer -->
+<footer class="bg-dark text-center text-white mt-4">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light m-1" href="#!" role="button">
+        <i class="bi bi-facebook"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="bi bi-instagram"></i></a>
+
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="bi bi-whatsapp"></i></a>
+
+    <!-- Section: Social media -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p >
+        Importando y distribuyendo buzos para todo el pais. Desde 1995 siendo los N°1 en ventas de buzos para hombres y mujeres.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright: EZ EM
+    <a class="text-white" href="https://mdbootstrap.com/">Todos los Derechos Reservados.</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+    </div>
+
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="js/jquery-3.6.4.js.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
