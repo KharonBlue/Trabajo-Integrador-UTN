@@ -32,6 +32,7 @@ $(document).ready(function () {
     $("#carouselExampleCaptions").addClass("d-none");
     $(".acercade").addClass("d-none");
     $(".cuerpo").addClass("d-none");
+    $(".contacto").addClass("d-none");
   });
 
   $(".inicio").click(function () {
@@ -39,6 +40,7 @@ $(document).ready(function () {
     $("#carouselExampleCaptions").removeClass("d-none");
     $(".acercade").addClass("d-none");
     $(".cuerpo").removeClass("d-none");
+    $(".contacto").addClass("d-none");
   });
 
   // Obtengo el archivo acerca-de.html para cargarlo a traves de ajax
@@ -51,5 +53,36 @@ $(document).ready(function () {
     $("#carouselExampleCaptions").addClass("d-none");
     $(".filtro").addClass("d-none");
     $(".cuerpo").addClass("d-none");
+    $(".contacto").addClass("d-none");
   });
+    // Obtengo el archivo contacto.html para cargarlo a traves de ajax
+    $.get("contacto.html", function (contacto) {
+        $(".contacto").html(contacto);
+        $(".contacto").addClass("d-none");
+      });
+      $("#contact").click(function () {
+        $(".contacto").removeClass("d-none");
+        $("#carouselExampleCaptions").addClass("d-none");
+        $(".filtro").addClass("d-none");
+        $(".cuerpo").addClass("d-none");
+      });
+
+    // Obtengo el archivo comprar.html para cargarlo a traves de ajax
+    $.get("comprar.html", function (comprar) {
+        $(".comprar").html(compra);
+        $(".comprar").addClass("d-none");
+      });
+      $("#comprar").click(function () {
+        $(".compra").removeClass("d-none");
+        $("#carouselExampleCaptions").addClass("d-none");
+        $(".filtro").addClass("d-none");
+        $(".cuerpo").addClass("d-none");
+      });
+    
 });
+
+
+
+
+
+        

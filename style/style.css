@@ -97,6 +97,112 @@ h1:after{
     text-align: center;
     text-decoration: none;
 }
+/* RESPONSIVE ================================*/
+
+@media screen and (max-width: 1100px){
+	.products-list .product-item{
+		width: 30.3%;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.category_list,
+	.products-list{
+		width: 100%;
+	}
+
+	.category_list{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.category_list .category_item{
+		align-self: flex-start;
+		width: 15%;
+		font-size: 14px;
+	}
+
+	.products-list .product-item{
+		margin-left: 4.5%;
+	}
+
+	.products-list .product-item:nth-child(3n+1){
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.category_list{
+		flex-direction: column;
+	}
+	.category_list .category_item{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 600px){
+
+	.products-list .product-item{
+		width: 47.5%;
+	}
+
+	.products-list .product-item:nth-child(3n+1){
+		margin-left: 4.5%;
+	}
+
+	.products-list .product-item:nth-child(2n+1){
+		margin-left: 0px;
+	}
+
+}
+
+@media screen and (max-width: 350px){
+	.products-list .product_item{
+		width: 100%;
+		margin-left: 0px;
+	}
+}
+
+/*modelos*/
+
+
+.lookbook{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: 25px 0px 0px;
+}
+
+.hvrbox {
+    display: inline-block;
+    width: 90%;
+    height: auto;
+    border: 2px solid #fff;
+    background: #0a0a0a;
+    padding: 25px;
+    box-sizing: border-box;
+    margin: 0px 5px 15px;
+}
+
+.hvrbox img{
+    max-width: 100%;
+}
+.compra{
+    border-radius: 50%;
+    background: #506c89;
+    display: flex;
+    border-radius: 50px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px 15px;
+    font-size: 21px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: none;
+    text-align: center;
+
+}
 
 
 
