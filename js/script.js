@@ -1,41 +1,76 @@
-$(document).ready(function(){
-    //Agregando clase active al primer enlace ===========
-    $(".category_list .category_item[category=all]").addClass("ct_item-active");
+const urlNombre = "https://jsonplaceholder.typicode.com/users";
+const urlComentarios = "https://jsonplaceholder.typicode.com/comments";
 
-     // Filtrando Productos ===========
-     $(".category_item").click(function(){
-         var catProduct = $(this).attr("category");
-         console.log(catProduct);
+$(document).ready(function () {
+  // Obtener la lista de usuarios
+  $.get(urlNombre, guardarUsuarios);
 
-         //Agregando clase active al enlace seleccionado ===========
+  // Colocar el nombre de usuario en el carrousel
+  function guardarUsuarios(data, status) {
+    let usuarios = data.map((user) => user.name);
+    for (i = 0; i <= 3; i++) {
+      $(`#slide-${i}`).html(usuarios[i]);
+    }
+  }
+  // Obtener la lista de comentarios
+  $.get(urlComentarios, guardarComentario);
+  // Colocar el comentario en el carrousel
+  function guardarComentario(data, status) {
+    let comentarios = data.map((comment) => comment.body);
+    for (i = 0; i <= 3; i++) {
+      $(`#comentario-${i}`).html(comentarios[i]);
+    }
+  }
 
-        $(".category_item").removeClass("ct_item-active");
-        $(this).addClass("ct_item-active");
-          
-        //Ocultando Productos ===========
-        $(".product-item").css("transform" , "scale(0)");
-        
-        function hideProduct() {
-             $(".product-item").hide();
-         } setTimeout (hideProduct,400)
+  // Obtengo el archivo filtro.html para cargarlo e inmediatamente lo oculto asignandole la clase d-none
+  $.get("filtro.html", function (filtro) {
+    $(".filtro").addClass("d-none");
+    $(".filtro").html(filtro);
+  });
+  $(".all-products").click(function () {
+    $(".filtro").removeClass("d-none");
+    $("#carouselExampleCaptions").addClass("d-none");
+    $(".acercade").addClass("d-none");
+    $(".cuerpo").addClass("d-none");
+    $("#contacto").addClass("d-none");
+    $(".registro").addClass("d-none");
+  });
 
-        //Mostrando productos ============
-        function showProduct(){
-            $(".product-item[category="+catProduct+"]").show();    
-            $(".product-item[category="+catProduct+"]").css("transform" , "scale(1)");
-        } setTimeout (showProduct,400) 
+  $(".inicio").click(function () {
+    $(".filtro").addClass("d-none");
+    $("#carouselExampleCaptions").removeClass("d-none");
+    $(".acercade").addClass("d-none");
+    $(".cuerpo").removeClass("d-none");
+    $("#contacto").removeClass("d-none");
+    $(".registro").addClass("d-none");
+  });
 
-     });
-        // Mostrando todos los productos ============
-     $(".category_item[category=all]").click(function(){
-        function showAll(){
-            $(".product-item").show();
-            $(".product-item").css("transform" , "scale(1)");
-        }setTimeout (showAll,400) 
-        
+  // Obtengo el archivo acerca-de.html para cargarlo a traves de ajax
+  $.get("acerca-de.html", function (acercade) {
+    $(".acercade").html(acercade);
+    $(".acercade").addClass("d-none");
+  });
+  $("#acercade").click(function () {
+    $(".acercade").removeClass("d-none");
+    $("#carouselExampleCaptions").addClass("d-none");
+    $(".filtro").addClass("d-none");
+    $(".cuerpo").addClass("d-none");
+    $("#contacto").addClass("d-none");
+    $(".registro").addClass("d-none");
+  });
 
-    })
+  // Obtengo el archivo acerca-de.html para cargarlo a traves de ajax
+  $.get("registro.html", function (registro) {
+    $(".registro").html(registro);
+    $(".registro").addClass("d-none");
+  });
+  $("#registro").click(function () {
+    $(".registro").removeClass("d-none");
+    $("#carouselExampleCaptions").addClass("d-none");
+    $(".acercade").addClass("d-none");
+    $(".filtro").addClass("d-none");
+    $(".cuerpo").addClass("d-none");
+    $("#contacto").addClass("d-none");
+  });
+  
 });
-
-
-        
