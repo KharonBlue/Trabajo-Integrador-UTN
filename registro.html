@@ -14,68 +14,79 @@
     <title>Compra</title>
   </head>
   <body>
-    <div class="root" id="registro">
-      <form action="" class="form-register need-validation" novalidate> 
+    <div class="container d-flex justify-content-center">
+      <div id="registro">
+        <form action="" class="form-register" novalidate>
           <div class="form-register__header">
-              <ul class="progressbar">
-                  <li class="progressbar__option active">paso 1</li>
-                  <li class="progressbar__option">paso 2</li>
-                  <li class="progressbar__option">paso 3</li>
-              </ul>
-              <h1 class="form-register__title">Registro en EZ EM</h1>
+            <h1 class="form-register__title">Resgistrate en EZEM</h1>
           </div>
           <div class="form-register__body">
-              <div class="step active" id="step-1">
-                  <div class="step__header">
-                      <h2 class="step__title">Información personal<small>(Paso 1)</small></h2>
-                  </div>
-                  <div class="step__body">
-                      <input type="text" id="nombre" placeholder="Nombre" class="step__input" >
-                      <input type="text" placeholder="Apellido" class="step__input" >
-                      <input type="email" placeholder="Correo Electronico" class="step__input" >
-                  </div>
-                  <div class="step__footer">
-                      <button type="button" class="step__button step__button--next" data-to_step="2" data-step="1">Siguiente</button>
-                  </div>
+            <div class="step active" id="step-1">
+              <div class="step__header">
+                <h2 class="step__title">Información de cuenta<small></small></h2>
               </div>
-              <div class="step" id="step-2">
-                  <div class="step__header">
-                      <h2 class="step__title">Información de Domicilio<small>(Paso 2)</small></h2>
-                  </div>
-                  <div class="step__body">
-                      <input type="text" placeholder="Provicia" class="step__input">
-                      <input type="text" placeholder="Localidad" class="step__input">
-                      <input type="text" placeholder="Calle" class="step__input">
-                      
-                      <input type="number" placeholder="Numero" class="step__input">
-                      <input type="tel" placeholder="Teléfono" class="step__input">
-                      <textarea rows="4" cols="80" placeholder="Observaciones" class="step__input"></textarea>
-                  </div>
-                  <div class="step__footer">
-                      <button type="button" class="step__button step__button--back" data-to_step="1" data-step="2">Regresar</button>
-                      <button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button>
-                  </div>
+              <div class="step__body">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Usario</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Usuario"
+                    name="Usiario"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="contraseña" class="form-label">Contraseña</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="contraseña"
+                    name="contraseña"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="contraseña" class="form-label"
+                    >Confirmar contraseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="contraseña1"
+                    name="contraseña1"
+                  />
+                </div>
               </div>
-              <div class="step" id="step-3">
-                  <div class="step__header">
-                      <h2 class="step__title">Información Tarjeta<small>(Paso 3)</small></h2>
-                  </div>
-                  <div class="step__body">
-                      <input type="text" placeholder="Numero de Tarjeta" class="step__input">
-                      <input type="text" placeholder="Nombre de Tarjeta" class="step__input">
-                      <input type="day/month" placeholder="Fecha de Vencimiento" class="step__input">
-                      <input type="number" placeholder="CVV" class="step__input">
-                  </div>
-                  <div class="step__footer">
-                      <button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">Regresar</button>
-                      <button type="submit" class="step__button"  onclick="mostrarDatos()">Confirmar</button>
-                  </div>
+              <div class="step__footer">
+                <button
+                  type="submit"
+                  class="btn btn-primary registrarse"
+                  id="registrarse"
+                >
+                  Registrarse
+                </button>
               </div>
+            </div>
           </div>
-      </form>
-  </div>
- 
-    <script src="js/compra.js"></script>
+        </form>
+      </div>
+    </div>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/registro.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/jquery-3.6.4.js.js"></script>
   </body>
 </html>

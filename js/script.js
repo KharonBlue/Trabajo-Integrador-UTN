@@ -32,7 +32,8 @@ $(document).ready(function () {
     $("#carouselExampleCaptions").addClass("d-none");
     $(".acercade").addClass("d-none");
     $(".cuerpo").addClass("d-none");
-    $(".contacto").addClass("d-none");
+    $("#contacto").addClass("d-none");
+    $(".registro").addClass("d-none");
   });
 
   $(".inicio").click(function () {
@@ -40,7 +41,8 @@ $(document).ready(function () {
     $("#carouselExampleCaptions").removeClass("d-none");
     $(".acercade").addClass("d-none");
     $(".cuerpo").removeClass("d-none");
-    $(".contacto").addClass("d-none");
+    $("#contacto").removeClass("d-none");
+    $(".registro").addClass("d-none");
   });
 
   // Obtengo el archivo acerca-de.html para cargarlo a traves de ajax
@@ -53,6 +55,22 @@ $(document).ready(function () {
     $("#carouselExampleCaptions").addClass("d-none");
     $(".filtro").addClass("d-none");
     $(".cuerpo").addClass("d-none");
-    $(".contacto").addClass("d-none");
+    $("#contacto").addClass("d-none");
+    $(".registro").addClass("d-none");
   });
+
+  // Obtengo el archivo acerca-de.html para cargarlo a traves de ajax
+  $.get("registro.html", function (registro) {
+    $(".registro").html(registro);
+    $(".registro").addClass("d-none");
+  });
+  $("#registro").click(function () {
+    $(".registro").removeClass("d-none");
+    $("#carouselExampleCaptions").addClass("d-none");
+    $(".acercade").addClass("d-none");
+    $(".filtro").addClass("d-none");
+    $(".cuerpo").addClass("d-none");
+    $("#contacto").addClass("d-none");
+  });
+  
 });

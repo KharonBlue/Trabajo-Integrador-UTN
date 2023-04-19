@@ -22,11 +22,11 @@
                 <h3 class="text-center mb-5"><i class="fas fa-user"></i> Información personal</h3>
                 <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre completo</label>
-                  <input type="text" class="form-control" id="nombre" name="nombre">
+                  <input type="text" class="form-control" id="nombre" name="nombre" required>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" name="email">
+                  <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <button class="btn btn-primary siguiente" type="button">Siguiente <i class="fas fa-arrow-right"></i></button>
               </div>
@@ -36,11 +36,11 @@
                 <h3 class="text-center mb-5"><i class="fas fa-address-card"></i> Información de contacto</h3>
                 <div class="mb-3">
                   <label for="telefono" class="form-label">Teléfono</label>
-                  <input type="tel" class="form-control" id="telefono" name="telefono">
+                  <input type="tel" class="form-control" id="telefono" name="telefono" required>
                 </div>
                 <div class="mb-3">
                   <label for="direccion" class="form-label">Dirección</label>
-                  <textarea class="form-control" id="direccion" name="direccion"></textarea>
+                  <textarea class="form-control" id="direccion" name="direccion" required></textarea>
                 </div>
                 <button class="btn btn-primary anterior" type="button"><i class="fas fa-arrow-left"></i> Anterior</button>
                 <button class="btn btn-primary siguiente" type="button">Siguiente <i class="fas fa-arrow-right"></i></button>
@@ -51,11 +51,11 @@
                 <h3 class="text-center mb-5"><i class="fas fa-address-card"></i> Información de pago</h3>
                 <div class="mb-3">
                   <label for="tarjeta" class="form-label">Número de tarjeta</label>
-                  <input type="number" class="form-control" id="tarjeta" name="tarjeta">
+                  <input type="number" class="form-control" id="tarjeta" name="tarjeta" required>
                 </div>
                 <div class="mb-3">
                   <label for="tarjeta-venc" class="form-label">Fecha de vencimiento</label>
-                  <textarea class="form-control" id="tarjeta-venc" name="tarjeta-venc"></textarea>
+                  <textarea class="form-control" id="tarjeta-venc" name="tarjeta-venc" required></textarea>
                 </div>
                 <button class="btn btn-primary anterior" type="button"><i class="fas fa-arrow-left"></i> Anterior</button>
                 <button class="btn btn-primary confirmar" type="button">Confirmar <i class="fas fa-arrow-right"></i></button>
@@ -63,7 +63,6 @@
             </div>
 
         </form>
-
 
             <script src="js/formulario-compra.js"></script>
         </body>
